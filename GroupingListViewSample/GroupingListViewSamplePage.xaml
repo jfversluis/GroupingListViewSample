@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GroupingListViewSample"
+    x:Class="GroupingListViewSample.GroupingListViewSamplePage">
+    
+	<ListView ItemsSource="{Binding PhonesList}" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Name}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Title}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
